@@ -76,6 +76,7 @@ case $CHOICE in
 		sed -i "/^iface $interface/a \\\tpost-up /usr/sbin/ethtool -s $interface wol g" /etc/network/interfaces
 		msg_ok "Wake on LAN activated on $interface\n"
   		echo -e "-- Remember to activate Wake on LAN in the BIOS --\n"
+    		echo -e "-- Changes will take effect after next reboot --\n"
 	else
 		msg_error "Wake on LAN already active on interface $interface\n"
 	fi
