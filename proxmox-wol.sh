@@ -59,7 +59,7 @@ interface=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "Select Int
     msg_error "No change was made to the system"
     exit
 }
-CHOICE=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "Activate Wake on LAN" --menu "This will activate Wake on LAN on interface $interface.\n \nContinue?" 14 68 2 \
+CHOICE=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "Activate Wake on LAN" --menu "\nThis will activate Wake on LAN on interface $interface.\n \nContinue?" 14 68 2 \
   "yes" " " \
   "no" " " 3>&2 2>&1 1>&3)
 
